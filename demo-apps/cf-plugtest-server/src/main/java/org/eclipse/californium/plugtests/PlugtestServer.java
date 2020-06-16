@@ -44,6 +44,7 @@ import org.eclipse.californium.elements.util.ExecutorsUtil;
 import org.eclipse.californium.elements.util.StringUtil;
 import org.eclipse.californium.plugtests.resources.Create;
 import org.eclipse.californium.plugtests.resources.DefaultTest;
+import org.eclipse.californium.plugtests.resources.Files;
 import org.eclipse.californium.plugtests.resources.Large;
 import org.eclipse.californium.plugtests.resources.LargeCreate;
 import org.eclipse.californium.plugtests.resources.LargePost;
@@ -279,5 +280,6 @@ public class PlugtestServer extends AbstractTestServer {
 		add(new Validate());
 		add(new Create());
 		add(new Shutdown());
+		add(new Files());
 	}
 }

@@ -211,6 +211,13 @@ public class ServerMessageDeliverer implements MessageDeliverer {
 		Resource current = getRootResource();
 		while (!path.isEmpty() && current != null) {
 			String name = path.removeFirst();
+			String query = "";
+			int idx = name.indexOf('?');
+			if(idx != -1) {
+				query = name.substring(idx + 1);
+				name = name.substring(0, idx);
+			}
+			System.out.println("findResource ### name = " + name + ", query = " + query + " ...");
 			current = current.getChild(name);
 		}
 		return current;
